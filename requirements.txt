@@ -1,0 +1,15 @@
+
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+joblib
+fastapi
+uvicorn
+jinja2
+python-dotenv
+groq
+chromadb
+pypdf
+google-genai

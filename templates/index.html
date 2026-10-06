@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Real Estate Intelligence</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="logo">
+                🏠 AI Real Estate
+            </div>
+
+            <nav>
+                <a href="#prediction">Price Prediction</a>
+                <a href="#recommendation">Recommendations</a>
+                <a href="#chatbot">AI Assistant</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <p class="badge">
+                    AI-Powered Real Estate Platform
+                </p>
+
+                <h1>
+                    Make Smarter
+                    <span>Real Estate Decisions</span>
+                </h1>
+
+                <p class="hero-description">
+                    Predict property prices, discover suitable properties,
+                    and get intelligent real estate guidance using
+                    Machine Learning, Generative AI, and RAG.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#prediction" class="btn primary-btn">
+                        Predict Property Price
+                    </a>
+
+                    <a href="#chatbot" class="btn secondary-btn">
+                        Ask AI Assistant
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="house-icon">
+                    🏡
+                </div>
+
+                <h3>
+                    AI Real Estate Intelligence
+                </h3>
+
+                <p>
+                    ML Prediction + Recommendations + RAG Assistant
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section class="features">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    PLATFORM FEATURES
+                </p>
+
+                <h2>
+                    Everything You Need
+                </h2>
+
+                <p>
+                    One platform for smarter property decisions.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        💰
+                    </div>
+
+                    <h3>
+                        Price Prediction
+                    </h3>
+
+                    <p>
+                        Use a trained Random Forest Machine Learning
+                        model to estimate property prices.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Property Recommendations
+                    </h3>
+
+                    <p>
+                        Find suitable properties according to budget,
+                        location, and number of bedrooms.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        AI + RAG Assistant
+                    </h3>
+
+                    <p>
+                        Ask real estate questions and get answers
+                        using AI and trusted property documents.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRICE PREDICTION
+    ========================== -->
+
+    <section id="prediction" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    MACHINE LEARNING
+                </p>
+
+                <h2>
+                    Property Price Prediction
+                </h2>
+
+                <p>
+                    Enter property details to estimate its market price.
+                </p>
+
+            </div>
+
+
+            <div class="form-card">
+
+                <form id="predictionForm">
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="OverallQual">
+                                Overall Quality
+                            </label>
+
+                            <input
+                                type="number"
+                                id="OverallQual"
+                                min="1"
+                                max="10"
+                                value="7"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="GrLivArea">
+                                Living Area (sq ft)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="GrLivArea"
+                                value="1800"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="GarageCars">
+                                Garage Cars
+                            </label>
+
+                            <input
+                                type="number"
+                                id="GarageCars"
+                                step="1"
+                                value="2"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="GarageArea">
+                                Garage Area (sq ft)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="GarageArea"
+                                value="500"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="TotalBsmtSF">
+                                Basement Area (sq ft)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="TotalBsmtSF"
+                                value="1000"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="firstFlrSF">
+                                First Floor Area (sq ft)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="firstFlrSF"
+                                value="1000"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="FullBath">
+                                Full Bathrooms
+                            </label>
+
+                            <input
+                                type="number"
+                                id="FullBath"
+                                value="2"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="TotRmsAbvGrd">
+                                Total Rooms
+                            </label>
+
+                            <input
+                                type="number"
+                                id="TotRmsAbvGrd"
+                                value="7"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="YearBuilt">
+                                Year Built
+                            </label>
+
+                            <input
+                                type="number"
+                                id="YearBuilt"
+                                value="2005"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="YearRemodAdd">
+                                Year Remodeled
+                            </label>
+
+                            <input
+                                type="number"
+                                id="YearRemodAdd"
+                                value="2005"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="BedroomAbvGr">
+                                Bedrooms
+                            </label>
+
+                            <input
+                                type="number"
+                                id="BedroomAbvGr"
+                                value="3"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="Neighborhood">
+                                Neighborhood
+                            </label>
+
+                            <input
+                                type="text"
+                                id="Neighborhood"
+                                value="NAmes"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="HouseStyle">
+                                House Style
+                            </label>
+
+                            <input
+                                type="text"
+                                id="HouseStyle"
+                                value="2Story"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="KitchenQual">
+                                Kitchen Quality
+                            </label>
+
+                            <select id="KitchenQual" required>
+
+                                <option value="Ex">
+                                    Excellent
+                                </option>
+
+                                <option value="Gd" selected>
+                                    Good
+                                </option>
+
+                                <option value="TA">
+                                    Average
+                                </option>
+
+                                <option value="Fa">
+                                    Fair
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn primary-btn full-btn"
+                    >
+                        Predict Property Price
+                    </button>
+
+                </form>
+
+
+                <div
+                    id="predictionResult"
+                    class="result-box hidden"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RECOMMENDATIONS
+    ========================== -->
+
+    <section
+        id="recommendation"
+        class="section alternate-section"
+    >
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    SMART RECOMMENDATIONS
+                </p>
+
+                <h2>
+                    Find Suitable Properties
+                </h2>
+
+                <p>
+                    Enter your preferences and discover matching properties.
+                </p>
+
+            </div>
+
+
+            <div class="form-card">
+
+                <form id="recommendationForm">
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="budget">
+                                Maximum Budget
+                            </label>
+
+                            <input
+                                type="number"
+                                id="budget"
+                                value="200000"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="recommendNeighborhood">
+                                Neighborhood
+                            </label>
+
+                            <input
+                                type="text"
+                                id="recommendNeighborhood"
+                                placeholder="Any"
+                                value="NAmes"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bedrooms">
+                                Minimum Bedrooms
+                            </label>
+
+                            <input
+                                type="number"
+                                id="bedrooms"
+                                value="3"
+                                min="1"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="topN">
+                                Number of Results
+                            </label>
+
+                            <select id="topN">
+
+                                <option value="3">
+                                    3
+                                </option>
+
+                                <option value="5" selected>
+                                    5
+                                </option>
+
+                                <option value="10">
+                                    10
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn primary-btn full-btn"
+                    >
+                        Find Properties
+                    </button>
+
+                </form>
+
+
+                <div
+                    id="recommendationResult"
+                    class="recommendation-results"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AI CHATBOT
+    ========================== -->
+
+    <section
+        id="chatbot"
+        class="section"
+    >
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    GENERATIVE AI + RAG
+                </p>
+
+                <h2>
+                    AI Real Estate Assistant
+                </h2>
+
+                <p>
+                    Ask questions about property buying, prices,
+                    investment, documents, and more.
+                </p>
+
+            </div>
+
+
+            <div class="chat-card">
+
+                <div
+                    id="chatMessages"
+                    class="chat-messages"
+                >
+
+                    <div class="chat-message assistant-message">
+
+                        <div class="message-icon">
+                            🤖
+                        </div>
+
+                        <div class="message-content">
+
+                            <strong>
+                                AI Assistant
+                            </strong>
+
+                            <p>
+                                Hello! Ask me anything about real estate,
+                                property buying, investment, or property
+                                documents.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <form id="chatForm" class="chat-form">
+
+                    <input
+                        type="text"
+                        id="chatQuestion"
+                        placeholder="Ask a real estate question..."
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="btn primary-btn"
+                    >
+                        Send
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <h3>
+                🏠 AI Real Estate Intelligence
+            </h3>
+
+            <p>
+                Machine Learning • Generative AI • RAG • FastAPI
+            </p>
+
+            <p class="copyright">
+                © 2026 AI Real Estate Intelligence Platform
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
